@@ -206,7 +206,7 @@ public class WorldGenerator : MonoBehaviour
                 
                 //需要一个中心点与当前顶点做减法然后归一化，再去计算柏林噪声
                 Vector3 centor = new Vector3(0, 0, vertices[index].z);
-                //TODO 
+               
                 vertices[index] += (centor - vertices[index]).normalized * (Mathf.PerlinNoise(pX, pZ) * waveHeight);
                 
                 //用于解决      地图生成的时候拼接的问题
